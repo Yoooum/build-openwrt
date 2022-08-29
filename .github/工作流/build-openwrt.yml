@@ -39,7 +39,7 @@ jobs:
           sudo apt-get -qq clean
       - name: Build Immortalwrt
         run: |
-          chmod +x build.newifi_d2.sh && ./build.newifi_d2.sh
+          chmod +x build.sh && ./build.sh
       - name: Upload bin
         uses: actions/upload-artifact@v3
         with:
