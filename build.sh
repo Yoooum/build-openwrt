@@ -10,3 +10,4 @@ sed -i 's/192.168.1.1/192.168.10.1/g' package/base-files/files/bin/config_genera
 make defconfig
 make download -j$(nproc) V=s
 # make -j$(nproc) || make -j1 || make -j1 V=s
+echo "FILE_DATE=$(date +%Y%m%d%H%M)" >>$GITHUB_ENV
