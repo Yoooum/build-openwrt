@@ -35,16 +35,6 @@ jobs:
       - name: Build Immortalwrt
         run: |
           chmod +x build.sh && ./build.sh
-
-      - name: Package Build Env
-        run: |
-          tar -zcvf openwrt-env.tar.gz /home/runner/work/build-openwrt/build-openwrt/immortalwrt
-          
-      - name: Upload Build Env
-        uses: actions/upload-artifact@v3
-        with:
-          name: Newifi3-d2-Env-${{ env.FILE_DATE }}
-          path: /home/runner/work/build-openwrt/build-openwrt/openwrt-env.tar.gz
           
       - name: Upload Packages
         uses: actions/upload-artifact@v3
